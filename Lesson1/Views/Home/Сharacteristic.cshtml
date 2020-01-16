@@ -1,0 +1,23 @@
+﻿@model Lesson1.Models.GadgetView
+@{
+    ViewData["Title"] = "Сharacteristic";
+}
+
+<h1>Сharacteristic of </h1>
+
+<table>
+    <tr>@Model.Firm  @Model.Name</tr>
+    <tr>
+        <td>Оперативная память:</td>
+        <td>@Model.Operative_memory Гб</td>
+    </tr>
+    <tr>
+        <td>Частота процессора:</td>
+        <td>@Model.Processor_freq ГГц</td>
+    </tr>
+    <tr>
+        <td>Цена:</td>
+        <td>@Model.Price рублей</td>
+    </tr>
+</table>
+@Html.ActionLink("Назад к списку", "Index")
