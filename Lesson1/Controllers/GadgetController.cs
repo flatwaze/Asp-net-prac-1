@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Lesson1.Controllers
 {
-    public class HomeController : Controller
+    public class GadgetController : Controller
     {
         // GET: /<controller>/
 

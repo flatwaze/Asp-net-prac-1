@@ -4,8 +4,10 @@
     ViewData["Title"] = "Index";
 }
 
+    <h1>Список товаров</h1>
+
     <ul>
-        <h1>Список товаров</h1>
+        
         @foreach (var item in Model)
         {
             <li>@Html.ActionLink(@item.Firm + " " + @item.Name, "Сharacteristic", new { id = item.Id })</li>
