@@ -34,6 +34,7 @@ namespace Lesson1
             }
 
             app.UseRouting();
+            app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {
