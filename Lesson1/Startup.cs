@@ -10,11 +10,11 @@ namespace Lesson1
     public class Startup
     {
 
-        private readonly IConfiguration configuration;
+        private readonly IConfiguration _config;
 
-        public Startup(IConfiguration _configuration)
+        public Startup(IConfiguration config)
         {
-            configuration = _configuration;
+            _config = config;
         }
 
 
