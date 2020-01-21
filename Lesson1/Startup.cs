@@ -5,16 +5,16 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Lesson1
+namespace WebStore
 {
     public class Startup
     {
 
-        private readonly IConfiguration configuration;
+        private readonly IConfiguration _config;
 
-        public Startup(IConfiguration _configuration)
+        public Startup(IConfiguration config)
         {
-            configuration = _configuration;
+            _config = config;
         }
 
 
@@ -34,6 +34,7 @@ namespace Lesson1
             }
 
             app.UseRouting();
+            app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {
