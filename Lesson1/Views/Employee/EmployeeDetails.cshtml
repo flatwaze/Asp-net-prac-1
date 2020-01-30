@@ -1,0 +1,27 @@
+﻿@model EmployeeView
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+@Html.ActionLink("Назад", "Index")
+<table class="table table-bordered">
+    <tr>
+        <td>Id</td>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <td>Фамилия</td>
+        <td>@Model.Surname</td>
+    </tr>
+    <tr>
+        <td>Имя</td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td>Возраст</td>
+        <td>@Model.Age</td>
+    </tr>
+</table>
