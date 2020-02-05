@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStore", "Lesson1\WebStor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStore.Domain", "WebStore.Domain\WebStore.Domain.csproj", "{DBEFD040-C2E2-4B80-8907-00925C407BBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStore.DomainNew", "WebStore.DomainNew\WebStore.DomainNew.csproj", "{6556163A-7F5B-4454-BED1-AB7066F08547}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStore.DAL", "WebStore.DAL\WebStore.DAL.csproj", "{59C45B67-5F3A-478A-8CC5-F33867977BF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{DBEFD040-C2E2-4B80-8907-00925C407BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBEFD040-C2E2-4B80-8907-00925C407BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBEFD040-C2E2-4B80-8907-00925C407BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6556163A-7F5B-4454-BED1-AB7066F08547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6556163A-7F5B-4454-BED1-AB7066F08547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6556163A-7F5B-4454-BED1-AB7066F08547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6556163A-7F5B-4454-BED1-AB7066F08547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59C45B67-5F3A-478A-8CC5-F33867977BF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59C45B67-5F3A-478A-8CC5-F33867977BF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59C45B67-5F3A-478A-8CC5-F33867977BF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59C45B67-5F3A-478A-8CC5-F33867977BF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

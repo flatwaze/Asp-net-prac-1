@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WebStore.Infrastructure.Interfaces;
 using WebStore.Infrastructure.Implementations;
+using WebStore.DAL;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebStore
 {
@@ -25,6 +27,8 @@ namespace WebStore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<WebStoreContext>(options => options
+                .UseSqlServer(_config.GetConnectionString("DefaultConnection")));
             services.AddSingleton<IEmployeeService, InMemoryIEmployeesService>();
             services.AddSingleton<IWarehouseService, InMemoryIWarehousesService>();
             services.AddSingleton<IProductService, InMemoryProductsService>();
