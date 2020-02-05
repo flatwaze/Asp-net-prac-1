@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebStore.Infrastructure.Interfaces;
-using WebStore.Domain.Entities.Base;
+using WebStore.DomainNew.Entities.Base;
+using WebStore.DomainNew.Entities;
 
 namespace WebStore.Infrastructure.Implementations
 {
@@ -280,6 +281,11 @@ namespace WebStore.Infrastructure.Implementations
         public IEnumerable<Brand> GetBrands()
         {
             return _brands;
+        }
+
+        public IEnumerable<Product> GetProducts()
+        {
+            return null;
         }
     }
 }
