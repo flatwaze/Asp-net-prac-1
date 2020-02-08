@@ -14,7 +14,6 @@ namespace WebStore.DomainNew.Entities
         public decimal Price { get; set; }
         public string SerialNumber { get; set; }
 
-        [ForeignKey("CategoryId")]
         public virtual Category Category { get; set; }
 
         [ForeignKey("BrandId")]

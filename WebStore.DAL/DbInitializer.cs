@@ -13,12 +13,10 @@ namespace WebStore.DAL
     {
         public static void Initialize(WebStoreContext context)
         {
-            //context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
-            // Look for any products.
             if (context.Products.Any())
             {
-                return;   // DB had already been seeded
+                return;
             }
 
             var categories = new List<Category>()
@@ -231,6 +229,12 @@ namespace WebStore.DAL
                     Id = 30,
                     Name = "Shoes",
                     Order = 9,
+                    ParentId = null
+                },
+                new Category(){
+                    Id = 31,
+                    Name = "Blues",
+                    Order = 10,
                     ParentId = null
                 }
             };

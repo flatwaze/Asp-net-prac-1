@@ -8,30 +8,31 @@ using WebStore.Models;
 
 namespace WebStore.ViewComponents
 {
-    [ViewComponent(Name = "Brands")]
-    public class BrandViewComponent : ViewComponent
+    public class BrandsViewComponent : ViewComponent
     {
         private readonly IProductService _productService;
-        public BrandViewComponent(IProductService productService)
+
+        public BrandsViewComponent(IProductService productService)
         {
             _productService = productService;
         }
+
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var brands = GetBrands();
             return View(brands);
         }
 
-        private List<BrandViewModel> GetBrands()
+        private IEnumerable<BrandViewModel> GetBrands()
         {
-            var brands = _productService.GetBrands();
-            return brands.Select(x => new BrandViewModel
+            var dbBrands = _productService.GetBrands();
+            return dbBrands.Select(b => new BrandViewModel
             {
-                Id = x.Id,
-                Name = x.Name,
-                Order = x.Order,
+                Id = b.Id,
+                Name = b.Name,
+                Order = b.Order,
                 ProductsCount = 0
-            }).OrderBy(x => x.Order).ToList();
+            }).OrderBy(b => b.Order).ToList();
         }
     }
 }
